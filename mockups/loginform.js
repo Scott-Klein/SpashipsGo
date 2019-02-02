@@ -1,8 +1,7 @@
 Vue.component('login-form', {
     template: 
     `
-    <div class="login-form">
-    <p></p>gi
+    <div class="login-form">g
         <div>
             <!-- our sign in form -->
             <form id="loginform">
