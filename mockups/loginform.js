@@ -3,8 +3,8 @@ Vue.component('login-form', {
     `
     <div class="login-form">
     <p></p>
-    <button @click="signIn">Sign in</button>
-        <div v-show="signInClicked">
+    <button @click="logIn">Sign in</button>
+        <div v-show="LogInClicked">
             <!-- our sign in form -->
             <form id="loginform">
                 
@@ -21,15 +21,17 @@ Vue.component('login-form', {
                     </div>
             </form>
         </div>
+    </div>
     `,
     data() {
         return {
-            signInClicked: false
+            LogInClicked: false
         }
     },
     methods: {
-        signIn() {
-            this.signInClicked = true;
+        logIn() {
+            this.LogInClicked = true;
+
         }
     }
 })
