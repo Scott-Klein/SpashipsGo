@@ -1,3 +1,7 @@
+
+/*This component is used to login.
+It returns nothing and fires no events
+*/
 Vue.component('login-form', {
     template: `
     <div class="loginform">
