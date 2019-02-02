@@ -1,5 +1,3 @@
-
-
 Vue.component('sign-up', {
     template: 
     `
