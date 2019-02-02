@@ -21,7 +21,13 @@ footer{
 .importantFrame {
     outline: 1px solid #19F6E8;
 }
-
+.sign-up {
+    background: rgb(31, 64, 75);
+    color:white;
+    box-sizing: border-box;
+    border-radius: 15;
+    box-shadow: -1px 15px 30px -12px black;
+}
 .description {
     color: white;
     font-family: 'Prosto One', cursive;
@@ -33,6 +39,11 @@ footer{
     grid-template-rows: 75vh;
 }
 
+#pageRoot {
+    width: 60vw;
+    margin-right: auto;
+    margin-left: auto;
+}
 #information {
 
     padding: 25px;
