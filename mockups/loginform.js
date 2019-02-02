@@ -3,7 +3,7 @@ Vue.component('login-form', {
     `
     <div class="login-form">
     <p></p>
-    
+    <button @click="logIn">Sign in</button>
         <div>
             <!-- our sign in form -->
             <form id="loginform">
@@ -23,5 +23,16 @@ Vue.component('login-form', {
             </form>
         </div>
     </div>
-    `
+    `,
+    data() {
+        return {
+            LogInClicked: false
+        }
+    },
+    methods: {
+        logIn() {
+            this.LogInClicked = true;
+
+        }
+    }
 })
