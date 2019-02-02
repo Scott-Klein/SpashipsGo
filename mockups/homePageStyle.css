@@ -1,19 +1,43 @@
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
-    grid-template-rows: 650px;
+html {
+    background-color: rgb(17, 35, 41);
 }
 
-#information {
-    background-color: blueviolet;
+h1 {
+    text-transform: uppercase;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 45px;
+    color: white;
 }
 
-#forms {
-    background-color: lime;
-    text-align: center;
+p {
+    font-family: 'Prosto One', cursive;
+    color: white;
 }
 
 footer{
     text-align: center;
+}
+
+.importantFrame {
+    outline: 1px solid #19F6E8;
+}
+
+.description {
+    color: white;
+    font-family: 'Prosto One', cursive;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 75vh;
+}
+
+#information {
+
+    padding: 25px;
+}
+
+#forms {
+    padding: 25px;
 }
