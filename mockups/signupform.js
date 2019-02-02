@@ -1,12 +1,9 @@
-
-
 Vue.component('sign-up', {
     template: 
     `
     <div class="sign-up">
     <p></p>
-    <button @click="signUp">Sign Up</button>
-        <div v-show="signUpClicked">
+        <div>
             <!-- our signup form ===================== -->
             <form id="signup-form" @submit.prevent="onSubmit">
       
@@ -24,30 +21,21 @@ Vue.component('sign-up', {
 
                 <!-- password -->
                     <div class="field">
-                        <lable class="label">Password:</lable>
+                        <label class="label">Password:</label>
                         <input type="password" class="input" name="name">
                     </div>
 
                 <!-- submit button -->
                     <div class="field has-text-right">
-                    <button type="submit" class="button is-danger">Submit</button>
+                        <button type="submit" class="button is-danger">Register</button>
                     </div>
                 </form>
         </div>
+    </div>
     `,
-    data() {
-        return {
-            signUpClicked: false
-        }
-    },
     methods: {
-        signUp() {
-            this.signUpClicked = true;
-        },
         onSubmit() {
-            
         }
-
     }
 
 
