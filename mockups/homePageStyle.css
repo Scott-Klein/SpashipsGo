@@ -1,0 +1,19 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    grid-template-rows: 650px;
+}
+
+#information {
+    background-color: blueviolet;
+}
+
+#forms {
+    background-color: lime;
+    text-align: center;
+}
+
+footer{
+    text-align: center;
+}
