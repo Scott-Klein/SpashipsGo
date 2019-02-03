@@ -24,6 +24,7 @@ Vue.component('detail-view', {
             <div id="buidlingDetail" class="detailPanel" v-show="showBuilding">
                 <h1>building</h1>
                 <build-queue></build-queue>
+                <build-grid></build-grid>
                 <p> A grid showing the buildings that can be built to go here.</p>
                 <p> Built buildings should be visible on the larger panel to the right designated for graphics.</p>
                 <p> Built buildings can also be upgraded to improve their performance. </p>
