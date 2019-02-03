@@ -23,6 +23,12 @@
     height: 70vh;
 }
 
+.queueBox {
+    border-style: solid;
+    border-color: black;
+    height: 120px;
+}
+
 #mainDash {
     display: grid;
     grid-template-columns: 1fr 3fr;

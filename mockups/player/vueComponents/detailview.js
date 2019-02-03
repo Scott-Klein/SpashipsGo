@@ -23,6 +23,7 @@ Vue.component('detail-view', {
 
             <div id="buidlingDetail" class="detailPanel" v-show="showBuilding">
                 <h1>building</h1>
+                <build-queue></build-queue>
                 <p> A grid showing the buildings that can be built to go here.</p>
                 <p> Built buildings should be visible on the larger panel to the right designated for graphics.</p>
                 <p> Built buildings can also be upgraded to improve their performance. </p>
@@ -42,7 +43,7 @@ Vue.component('detail-view', {
             <div id="StarDetail" class="detailPanel" v-show="showStar">
                 <h1>star</h1>
                 <p> this will be a grid of planets and celestial bodies in grahpical form </p>
-                <p> selecting player owned planets will result in that planet becoming focused.
+                <p> selecting player owned planets will result in that planet becoming focused.</p>
             </div>
         </div>
         `,
