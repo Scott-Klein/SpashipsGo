@@ -9,24 +9,26 @@
 <body>
     <div id="app">
         <div id="topButtons" class="grid-container-buttons">
-            <button class="navBtn">Overview</button>
-            <button class="navBtn">Buildings</button>
-            <button class="navBtn">Research</button>
-            <button class="navBtn">Fleet</button>
-            <button class="navBtn">Star Map</button>
+            <button class="navBtn" @click="viewOverview">Overview</button>
+            <button class="navBtn" @click="viewBuildings">Buildings</button>
+            <button class="navBtn" @click="viewResearch">Research</button>
+            <button class="navBtn" @click="viewFleet">Fleet</button>
+            <button class="navBtn" @click="viewStars">Star Map</button>
         </div>
 
-        <div class="mainDash">
+        <div id="mainDash">
 
             <div id="sideDash" class="detailView">
+                <detail-view :selected-view="viewSelection"></detail-view>
             </div>
 
-            <div id="mainDash" class="detailView">
+            <div id="graphicDash" class="detailView">
             </div>
 
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vueComponents/detailview.js"></script>
     <script src="vueComponents/main.js"></script>
 </body>
 
