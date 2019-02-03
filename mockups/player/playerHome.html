@@ -3,26 +3,31 @@
 
 <head>
     <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="playerStyle.css" </head> <body>
-    <div id="topButtons" class="grid-container-buttons">
-        <button class="navBtn">Overview</button>
-        <button class="navBtn">Buildings</button>
-        <button class="navBtn">Research</button>
-        <button class="navBtn">Fleet</button>
-        <button class="navBtn">Star Map</button>
-    </div>
+    <link rel="stylesheet" type="text/css" href="playerStyle.css">
+</head>
 
-    <div class="mainDash">
-
-        <div id="sideDash" class="detailView">
+<body>
+    <div id="app">
+        <div id="topButtons" class="grid-container-buttons">
+            <button class="navBtn">Overview</button>
+            <button class="navBtn">Buildings</button>
+            <button class="navBtn">Research</button>
+            <button class="navBtn">Fleet</button>
+            <button class="navBtn">Star Map</button>
         </div>
 
-        <div id="mainDash" class="detailView">
+        <div class="mainDash">
+
+            <div id="sideDash" class="detailView">
+            </div>
+
+            <div id="mainDash" class="detailView">
+            </div>
+
         </div>
-
-
     </div>
-
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vueComponents/main.js"></script>
+</body>
 
 </html>
