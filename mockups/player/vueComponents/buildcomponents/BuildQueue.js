@@ -7,8 +7,8 @@ Vue.component('build-queue',
                 <div class="queueBox">
                     <ul>
                         <li>Building a mine (20 minutes remaining)</li>
-                        <li>Building a factory (not started)</li
-                    <ul>
+                        <li>Building a factory (not started)</li>
+                    </ul>
                 </div>
             </div>
         `

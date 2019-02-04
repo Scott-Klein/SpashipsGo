@@ -12,7 +12,9 @@
     font-family: 'VT323', monospace;
     font-size: 36px;
 }
-
+.buildingImage {
+    max-width: 80px;
+}
 .detailPanel {
     padding: 20px;
 }

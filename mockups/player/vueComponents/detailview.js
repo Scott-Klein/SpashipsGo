@@ -54,42 +54,40 @@ Vue.component('detail-view', {
         }
     },
     computed: {
-        showOverview(){
-            if(this.selectedView == "overview"){
+        showOverview() {
+            if (this.selectedView == "overview") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showBuilding(){
-            if(this.selectedView == "building"){
+        showBuilding() {
+            if (this.selectedView == "building") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showResearch(){
-            if(this.selectedView == "research"){
+        showResearch() {
+            if (this.selectedView == "research") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showFleet(){
-            if(this.selectedView == "fleet")
-            {
+        showFleet() {
+            if (this.selectedView == "fleet") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showStar(){
-            if(this.selectedView == "star")
-            {
+        showStar() {
+            if (this.selectedView == "star") {
                 return true;
             }
             else {
