@@ -2,7 +2,8 @@ var graphicHomepage = new Vue({
     el: 'graphic-slider',
     data: {
         images: [
-
+            'https://i.imgur.com/950KYZv.jpg', 'https://i.imgur.com/ZMI6qRr.jpg',
+            'https://i.imgur.com/zm483ue.jpg', 'https://i.imgur.com/pDvrHsF.jpg'
         ],
         currentNumber: 0,
         timer: null,
@@ -22,6 +23,9 @@ var graphicHomepage = new Vue({
         }, 
         next: function() {
             this.currentNumber += 1
+        },
+        prev: function() {
+            this.currentNumber -=1
         }
     },
 
