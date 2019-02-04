@@ -3,7 +3,10 @@ var graphicHomepage = new Vue({
     data: {
         images: [
             'https://i.imgur.com/950KYZv.jpg', 'https://i.imgur.com/ZMI6qRr.jpg',
-            'https://i.imgur.com/zm483ue.jpg', 'https://i.imgur.com/pDvrHsF.jpg'
+            'https://i.imgur.com/zm483ue.jpg', 'https://i.imgur.com/pDvrHsF.jpg',
+            'https://i.imgur.com/LFKA90bb.jpg', 'https://i.imgur.com/K0mzZdjb.jpg',
+            'https://i.imgur.com/3aejBPkb.jpg', 'https://i.imgur.com/FfA5nfeb.jpg',
+            'https://i.imgur.com/6goU73ub.jpg', 'https://i.imgur.com/CcHpSOW.jpg'
         ],
         currentNumber: 0,
         timer: null,
@@ -23,9 +26,6 @@ var graphicHomepage = new Vue({
         }, 
         next: function() {
             this.currentNumber += 1
-        },
-        prev: function() {
-            this.currentNumber -=1
         }
     },
 
