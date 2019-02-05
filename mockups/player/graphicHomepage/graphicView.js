@@ -23,7 +23,7 @@ Vue.component('graphic-view', {
             </div>
         `,
 
-    data: {
+    data() { return {
         images: [
             'https://i.imgur.com/950KYZv.jpg', 'https://i.imgur.com/ZMI6qRr.jpg',
             'https://i.imgur.com/zm483ue.jpg', 'https://i.imgur.com/pDvrHsF.jpg',
@@ -33,6 +33,7 @@ Vue.component('graphic-view', {
         ],
         currentNumber: 0,
         timer: null,
+    }
     },
 
     mounted: function(){
