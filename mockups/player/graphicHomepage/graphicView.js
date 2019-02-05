@@ -1,6 +1,6 @@
 Vue.component('graphic-view', {
     props: {
-        selectedView: String
+        selectedGraphic: String
     },
 
     template:
@@ -18,7 +18,7 @@ Vue.component('graphic-view', {
                 <div id="fleetGraphic" v-show="showFleet">
                 </div>
 
-                <div id="starDetail" v-show="showStar">
+                <div id="starGraphic" v-show="showStar">
                 </div>
             </div>
         `,
@@ -54,7 +54,7 @@ Vue.component('graphic-view', {
 
     computed: {
         showOverview() {
-            if(this.selectedView == "overview"){
+            if(this.selectedGraphic == "overview"){
                 this.currentNumber = 0;
                 this.currentNumber < 2;
                 if(this.currentNumber >= 2) {
@@ -68,7 +68,7 @@ Vue.component('graphic-view', {
         },
 
         showBuilding() {
-            if(this.selectedView == "building") {
+            if(this.selectedGraphic == "building") {
                 this.currentNumber = 2;
                 this.currentNumber < 4;
                 if(this.currentNumber >= 4) {
@@ -82,7 +82,7 @@ Vue.component('graphic-view', {
         },
 
         showResearch() {
-            if(this.selectedView == "research") {
+            if(this.selectedGraphic == "research") {
                 this.currentNumber = 4;
                 this.currentNumber < 6;
                 if(this.currentNumber >= 6) {
@@ -96,7 +96,7 @@ Vue.component('graphic-view', {
         },
 
         showFleet() {
-            if(this.selectedView == "fleet") {
+            if(this.selectedGraphic == "fleet") {
                 this.currentNumber = 6;
                 this.currentNumber < 8;
                 if(this.currentNumber >= 8) {
@@ -110,7 +110,7 @@ Vue.component('graphic-view', {
         },
 
         showStar() {
-            if(this.selectedView == "star") {
+            if(this.selectedGraphic == "star") {
                 this.currentNumber = 8;
                 this.currentNumber < 10;
                 if(this.currentNumber >= 10) {
@@ -124,7 +124,7 @@ Vue.component('graphic-view', {
         },
 
         currentImage: function() {
-            return this.images[Math.abs(this.currentNumber) % this.images.length]
+            return this.graphic.images[Math.abs(this.graphic.currentNumber) % this.graphic.images.length]
         }
     }
 })
