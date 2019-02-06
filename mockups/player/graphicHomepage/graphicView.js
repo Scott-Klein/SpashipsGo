@@ -6,6 +6,9 @@ Vue.component('graphic-view', {
     template:
         `
             <div>
+                <div v-for="number in [currentNumber]" :key='number'>
+                <img :src="currentImage" v-on:mouseover="stopRotation" v-on:mouseout="startRotation" width = "1200" height = "506" />   
+                </div>
                 <div id="overviewGraphic" v-show="showOverview">
                 </div>
 
