@@ -11,35 +11,28 @@ Vue.component('graphic-view', {
                 </div>
                 <div id="overviewGraphic" v-show="showOverview">
                 </div>
-
                 <div id="buildingGraphic" v-show="showBuilding">
                 </div>
-
                 <div id="researchGraphic" v-show="showResearch">
                 </div>
-
                 <div id="fleetGraphic" v-show="showFleet">
                 </div>
-
                 <div id="starGraphic" v-show="showStar">
                 </div>
             </div>
         `,
 
-    data: function() {
-        images = [
+    data() { return {
+        images: [
             'https://i.imgur.com/950KYZv.jpg', 'https://i.imgur.com/ZMI6qRr.jpg',
             'https://i.imgur.com/zm483ue.jpg', 'https://i.imgur.com/pDvrHsF.jpg',
             'https://i.imgur.com/LFKA90bb.jpg', 'https://i.imgur.com/K0mzZdjb.jpg',
             'https://i.imgur.com/3aejBPkb.jpg', 'https://i.imgur.com/FfA5nfeb.jpg',
             'https://i.imgur.com/6goU73ub.jpg', 'https://i.imgur.com/CcHpSOW.jpg'
         ],
-        timer = null;
-        currentNumber = 0;
-        return {
-            currentNumber
-        };
-
+        currentNumber: 0,
+        timer: null,
+    }
     },
 
     mounted: function(){
@@ -131,8 +124,7 @@ Vue.component('graphic-view', {
         },
 
         currentImage: function() {
-            return this.graphic.images[Math.abs(this.graphic.currentNumber) % this.graphic.images.length]
-        },
-        
+            return this.images[Math.abs(this.currentNumber) % this.images.length]
+        }
     }
 })
