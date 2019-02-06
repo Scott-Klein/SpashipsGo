@@ -6,6 +6,9 @@ Vue.component('graphic-view', {
     template:
         `
             <div>
+                <div v-for="number in [currentNumber]" :key='number'>
+                <img :src="currentImage" v-on:mouseover="stopRotation" v-on:mouseout="startRotation" width = "1200" height = "506" />   
+                </div>
                 <div id="overviewGraphic" v-show="showOverview">
                 </div>
 
@@ -125,7 +128,7 @@ Vue.component('graphic-view', {
         },
 
         currentImage: function() {
-            return this.graphic.images[Math.abs(this.graphic.currentNumber) % this.graphic.images.length]
+            return this.images[Math.abs(this.currentNumber) % this.images.length]
         }
     }
 })
