@@ -24,18 +24,7 @@
 
             <div id="graphicDash" class="detailView">
                 <graphic-view :selected-view="viewSelection">
-                    <div 
-                        v-for="number in [currentNumber]"
-                        :key='number'
-                    >
-                        <img 
-                            :src="currentImage"
-                            v-on:mouseover="stopRotation"
-                            v-on:mouseout="startRotation"
-                            width = "1200"
-                            height = "506"                        
-                        />   
-                    </div>
+
                 </graphic-view>
             </div>
 
