@@ -1,9 +1,31 @@
+.buildGrid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+h4 {
+    text-align: center;
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
 .grid-container-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    
     grid-gap: 5px;
+}
 
+.build-button {
+    width: 100px;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
 }
 
 .navBtn {
@@ -12,9 +34,28 @@
     font-family: 'VT323', monospace;
     font-size: 36px;
 }
+
 .buildingImage {
-    max-width: 80px;
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
 }
+
+.buildingName {
+    margin: 0;
+    background-color: darkslategray;
+}
+
+.building {
+
+    max-width: 100px;
+    margin: 10px;
+    background-color: grey;
+    color: white;
+    border-radius: 15px;
+}
+
+
 .detailPanel {
     padding: 20px;
 }

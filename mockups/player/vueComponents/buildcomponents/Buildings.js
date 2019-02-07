@@ -4,7 +4,7 @@ Vue.component('build-grid',{
     template: 
     `
         <div>
-            <ul>
+            <ul class="buildGrid">
                 <li v-for="building in buildings">
                     <building :buildingType="building.type"></building>
                 </li>
@@ -14,9 +14,18 @@ Vue.component('build-grid',{
     data() {
         return {
             buildings: [
-                { id: 1, type: 'Factory' },
-                { id: 2, type: 'Steel Mine' },
-                { id: 3, type: 'Fuel processor' }
+                { type: 'Factory' },
+                { type: 'Steel Mine' },
+                { type: 'Fuel Processor' },
+                { type: 'Nanite Factory' },
+                { type: 'Crystal Mine' },
+                { type: 'Fuel Extractor' },
+                { type: 'Energy Array' },
+                { type: 'Fusion Reactor' },
+                { type: 'Shipyard' },
+                { type: 'Research Centre' },
+                { type: 'Command Centre' },
+                { type: 'Fuel Tank' },
             ]
         }
     }
@@ -28,30 +37,30 @@ Vue.component('building', {
         buildingType: String
     },
     template:`
-    <div>
-        <div class="buildingImage"><img :src=iconPath alt="Building Icon"></div>
-        <p> {{iconPath}}</p>
+    <div class="building">
+        <div>
+            <img class="buildingImage" :src=iconPath alt="Building Icon">
+        </div>
         <div class="buildingName">
             <h4>{{name}}</h4>
         </div>
+        <div class="build-buttton-container">
+            <button class="build-button" @click="beginBuild">Build</button>
+        </div>
     </div>
-    `,
-    data() {
-        return {}
-    }
+    `
     ,
     computed: {
-        name() {
-            if(buidingType != undefined) {
-                return buildingType;
-            }
-            else {
-                return "undefined building."
-            }
-
+        name(){
+            return this.buildingType;
         },
         iconPath(){
-            return "vueComponents/buildcomponents/icons/" + buildingType + ".svg";
+            return "vueComponents/buildcomponents/icons/"+ this.buildingType +".svg";
+        }
+    },
+    methods:{
+        beginBuild() {
+            this.$emit('build-Begin')
         }
     }
 }
