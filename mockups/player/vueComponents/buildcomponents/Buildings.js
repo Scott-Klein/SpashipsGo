@@ -6,7 +6,39 @@ Vue.component('build-grid',{
         <div>
             <ul class="buildGrid">
                 <li v-for="building in buildings">
-                    <building :buildingType="building.type"></building>
+                    <building :buildingType="building.type" button="Build"></building>
+                </li>
+            </ul>
+        </div>
+    `,
+    data() {
+        return {
+            buildings: [
+                { type: 'Factory' },
+                { type: 'Steel Mine' },
+                { type: 'Fuel Processor' },
+                { type: 'Nanite Factory' },
+                { type: 'Crystal Mine' },
+                { type: 'Fuel Extractor' },
+                { type: 'Energy Array' },
+                { type: 'Fusion Reactor' },
+                { type: 'Shipyard' },
+                { type: 'Research Centre' },
+                { type: 'Command Centre' },
+                { type: 'Fuel Tank' },
+            ]
+        }
+    }
+}
+)
+
+Vue.component('upgrade-grid',{
+    template: 
+    `
+        <div>
+            <ul class="buildGrid">
+                <li v-for="building in buildings">
+                    <building :buildingType="building.type" button="Upgrade"></building>
                 </li>
             </ul>
         </div>
@@ -34,7 +66,8 @@ Vue.component('build-grid',{
 
 Vue.component('building', {
     props: {
-        buildingType: String
+        buildingType: String,
+        button: String
     },
     template:`
     <div class="building">
@@ -44,9 +77,10 @@ Vue.component('building', {
         <div class="buildingName">
             <h4>{{name}}</h4>
         </div>
-        <div class="build-buttton-container">
-            <button class="build-button" @click="beginBuild">Build</button>
+        <div class="build-button" @click="beginBuild">
+            <p>{{button}}</p>
         </div>
+
     </div>
     `
     ,
