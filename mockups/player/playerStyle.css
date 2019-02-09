@@ -112,11 +112,11 @@ h4 {
     overflow: auto;
 }
 
-#hexOneRow {
+#hexRow1 {
     position: relative;
 }
-#hexTwoRow {
+#hexRow2 {
     position: relative;
-    right: 90px;
+    right: 390px;
     bottom: -53px;
 }

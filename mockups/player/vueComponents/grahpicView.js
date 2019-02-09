@@ -6,8 +6,6 @@ Vue.component('hex-row',
     `
         <div>
             <ul class="hexList">
-                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
-                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
                 <li class="hexItem" v-for="hexTile in this.rowData">
                     <img :src="getHexDirectory(hexTile)" />
                 </li>
@@ -29,8 +27,12 @@ Vue.component('hex-map',
     `
         <div class="hexMapRoot">
             <p>Hello Hex Map</p>
-
-            <hex-row id="hexOneRow" :rowData="mapRow1" ></hex-row>
+            <ul>
+                <li v-for="(row, index) in map">
+                    <hex-row id={{"hexRow" + index}} :rowData="mapRow1" ></hex-row>
+                </li>
+            </ul>
+            
             <hex-row id="hexTwoRow" :rowData="mapRow2" ></hex-row>
         </div>
     `,
