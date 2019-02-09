@@ -1,3 +1,66 @@
+
+Vue.component('hex-row', 
+{
+    props: {
+        rowData
+    },
+    template: 
+    `
+        <div>
+            <ul class="hexList">
+                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
+                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
+                <li class="hexItem" v-for="hexTile in this.rowData">
+                    <img :src=getHexDirectory(hextTile)/>
+                </li>
+            </ul>
+        </div>
+    `,
+    methods: {
+        getHexDirectory(hexTileName) {
+            return "vueComponents/map/" + hexTileName + ".png";
+        }
+    }
+})
+
+
+
+Vue.component('hex-map',
+{
+    template: 
+    `
+        <div class="hexMapRoot">
+            <p>Hello Hex Map</p>
+
+            <hex-row id="hexOneRow" :rowData="mapRow1" ></hex-row>
+            <hex-row id="hexTwoRow" :rowData="mapRow2" ></hex-row>
+        </div>
+    `,
+    data() {
+        return {
+            mapRow1: [
+                "oreHex",
+                "desertHex",
+                "clayHex",
+                "sheepHex",
+                "waterHex",
+                "wheatHex",
+                "woodHex"
+            ],
+            mapRow2: [
+                "oreHex",
+                "desertHex",
+                "clayHex",
+                "sheepHex",
+                "waterHex",
+                "wheatHex",
+                "woodHex" 
+            ]
+        }
+    }
+}
+)
+
 Vue.component('graphic-view', {
     props: {
         selectedView: String
@@ -75,65 +138,4 @@ Vue.component('graphic-view', {
         }
     }
 })
-
-
-Vue.component('hex-row', 
-{
-    props: {
-        rowData
-    },
-    template: 
-    `
-        <div>
-            <ul class="hexList">
-                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
-                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
-                <li class="hexItem" v-for="hexTile in rowData">
-                    <img :src=getHexDirectory(hextTile)/>
-                </li>
-            </ul>
-        </div>
-    `,
-    methods: {
-        getHexDirectory(hexTileName) {
-            return "vueComponents/map/" + hexTileName + ".png";
-        }
-    }
-})
-
-Vue.component('hex-map',
-{
-    template: 
-    `
-        <div class="hexMapRoot">
-            <p>Hello Hex Map</p>
-
-            <hex-row id="hexOneRow" :rowData="mapRow1" ></hex-row>
-            <hex-row id="hexTwoRow" :rowData="mapRow2" ></hex-row>
-        </div>
-    `,
-    data() {
-        return {
-            mapRow1: [
-                "oreHex",
-                "desertHex",
-                "clayHex",
-                "sheepHex",
-                "waterHex",
-                "wheatHex",
-                "woodHex"
-            ],
-            mapRow2: [
-                "oreHex",
-                "desertHex",
-                "clayHex",
-                "sheepHex",
-                "waterHex",
-                "wheatHex",
-                "woodHex" 
-            ]
-        }
-    }
-}
-)
 
