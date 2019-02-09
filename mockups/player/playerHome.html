@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="playerStyle.css">
+</head>
+
+<body>
+    <div id="app">
+        <div id="topButtons" class="grid-container-buttons">
+            <button class="navBtn" @click="viewOverview">Overview</button>
+            <button class="navBtn" @click="viewBuildings">Buildings</button>
+            <button class="navBtn" @click="viewResearch">Research</button>
+            <button class="navBtn" @click="viewFleet">Fleet</button>
+            <button class="navBtn" @click="viewStars">Star Map</button>
+        </div>
+        <h5>Player resources and other details at a glance.</h5>
+        <div id="mainDash">
+
+            <div id="sideDash" class="detailView">
+                <detail-view :selected-view="viewSelection"></detail-view>
+            </div>
+
+            <div id="graphicDash" class="detailView">
+                <graphic-view :selected-view="viewSelection"></graphic-view>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="vueComponents/buildcomponents/Buildings.js"></script>
+    <script src="vueComponents/detailview.js"></script>
+    <script src="vueComponents/grahpicView.js"></script>
+    <script src="vueComponents/main.js"></script>
+</body>
+
+</html>
