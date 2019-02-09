@@ -7,23 +7,24 @@ Vue.component('graphic-view', {
         <div>
 
             <div id="overviewGrahpic" class="grahpicPanel" v-show="showOverview">
-                <p> Overview grahpics here</p>
+                <graphic-slide-show> </graphic-slide-show>
             </div>
 
             <div id="buidlingGrahpic" class="grahpicPanel" v-show="showBuilding">
+                <graphic-slide-show> </graphic-slide-show>
                 <hex-map></hex-map>
             </div>
 
             <div id="researchGrahpic" class="grahpicPanel" v-show="showResearch">
-            <p> Research grahpics here</p>
+                <graphic-slide-show> </graphic-slide-show>
             </div>
 
             <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">
-            <p> Fleet grahpics here</p>
+                <graphic-slide-show> </graphic-slide-show>
             </div>
 
             <div id="StarGrahpic" class="grahpicPanel" v-show="showStar">
-            <p> Star grahpics here</p>
+                <graphic-slide-show> </graphic-slide-show>
             </div>
         </div>
         `,
