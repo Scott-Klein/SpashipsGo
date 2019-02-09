@@ -23,10 +23,13 @@ Vue.component('detail-view', {
 
             <div id="buidlingDetail" class="detailPanel" v-show="showBuilding">
                 <h1>building</h1>
+                
                 <build-queue></build-queue>
-                <p> A grid showing the buildings that can be built to go here.</p>
-                <p> Built buildings should be visible on the larger panel to the right designated for graphics.</p>
-                <p> Built buildings can also be upgraded to improve their performance. </p>
+                <h2>Construct</h2>
+                <build-grid></build-grid>
+                <h2>Upgrades</h2>
+                <upgrade-grid></upgrade-grid>
+                <p>Building level also needs to be displayed with each Icon</p>
             </div>
 
             <div id="researchDetail" class="detailPanel" v-show="showResearch">
@@ -53,42 +56,40 @@ Vue.component('detail-view', {
         }
     },
     computed: {
-        showOverview(){
-            if(this.selectedView == "overview"){
+        showOverview() {
+            if (this.selectedView == "overview") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showBuilding(){
-            if(this.selectedView == "building"){
+        showBuilding() {
+            if (this.selectedView == "building") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showResearch(){
-            if(this.selectedView == "research"){
+        showResearch() {
+            if (this.selectedView == "research") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showFleet(){
-            if(this.selectedView == "fleet")
-            {
+        showFleet() {
+            if (this.selectedView == "fleet") {
                 return true;
             }
             else {
                 return false;
             }
         },
-        showStar(){
-            if(this.selectedView == "star")
-            {
+        showStar() {
+            if (this.selectedView == "star") {
                 return true;
             }
             else {

@@ -15,7 +15,7 @@
             <button class="navBtn" @click="viewFleet">Fleet</button>
             <button class="navBtn" @click="viewStars">Star Map</button>
         </div>
-
+        <h5>Player resources and other details at a glance.</h5>
         <div id="mainDash">
 
             <div id="sideDash" class="detailView">
@@ -23,16 +23,18 @@
             </div>
 
             <div id="graphicDash" class="detailView">
-                <graphic-view :selected-view="viewSelection">
 
-                </graphic-view>
+                <graphic-view :selected-view="viewSelection"></graphic-view>
             </div>
 
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="graphicHomepage/grahpicSlideShow.js"></script>
+    <script src="vueComponents/buildcomponents/Buildings.js"></script>
     <script src="vueComponents/detailview.js"></script>
-    <script src="graphicHomepage/graphicView.js"></script>
+    <script src="vueComponents/grahpicView.js"></script>
+
     <script src="vueComponents/main.js"></script>
 
 

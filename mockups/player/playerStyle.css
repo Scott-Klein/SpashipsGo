@@ -1,17 +1,88 @@
+ul {
+    padding: 0px;
+}
+li {
+    margin: 0px;
+
+}
+p {
+    margin: 0px;
+}
+
+img {
+    max-width: inherit;
+    max-height: inherit;
+}
+
+h4 {
+    text-align: center;
+    display: block;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.hexItem {
+    float: left;
+    max-width: 60px;
+}
+
 .grid-container-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
-    
     grid-gap: 5px;
-
 }
 
+.buildGrid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+}
+
+.hexList {
+    list-style: none;
+}
+
+.build-button {
+    max-width: inherit;
+    background-color: green;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+}
+.buttonContainer {
+    width: inehrit;
+}
 .navBtn {
     padding: 22px;
     font-size: 12fr;
     font-family: 'VT323', monospace;
     font-size: 36px;
 }
+
+.buildingImage {
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+
+.buildingName {
+    margin: 0;
+    background-color: darkslategray;
+}
+
+.building {
+    max-width: 100px;
+    margin: 10px;
+    background-color: grey;
+    color: white;
+    border-radius: 15px;
+}
+
 
 .detailPanel {
     padding: 20px;
@@ -20,7 +91,7 @@
 .detailView  {
     border-style: double;
     border-color: black;
-    height: 70vh;
+
 }
 
 .queueBox {
@@ -34,4 +105,18 @@
     grid-template-columns: 1fr 3fr;
     grid-gap: 5px;
     margin-top: 5px;
+}
+
+#sideDash {
+    height: 70vh;
+    overflow: auto;
+}
+
+#hexOneRow {
+    position: relative;
+}
+#hexTwoRow {
+    position: relative;
+    right: 90px;
+    bottom: -53px;
 }

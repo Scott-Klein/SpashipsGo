@@ -1,7 +1,8 @@
 var app = new Vue({
     el: '#playerHomepage',
     data: {
-        viewSelection: "overview"
+        isHidden:true,
+        viewSelection: "building"
     },
     methods: {
         viewOverview(){
