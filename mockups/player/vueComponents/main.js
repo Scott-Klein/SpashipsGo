@@ -1,5 +1,5 @@
 var app = new Vue({
-    el: '#app',
+    el: '#playerHomepage',
     data: {
         isHidden:true,
         viewSelection: "building"
