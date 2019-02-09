@@ -3,11 +3,16 @@ ul {
 }
 li {
     margin: 0px;
+
 }
 p {
     margin: 0px;
 }
 
+img {
+    max-width: inherit;
+    max-height: inherit;
+}
 
 h4 {
     text-align: center;
@@ -21,6 +26,7 @@ h4 {
 
 .hexItem {
     float: left;
+    max-width: 60px;
 }
 
 .grid-container-buttons {
@@ -111,6 +117,6 @@ h4 {
 }
 #hexTwoRow {
     position: relative;
-    right: 330px;
-    bottom: -197px;
+    right: 90px;
+    bottom: -53px;
 }

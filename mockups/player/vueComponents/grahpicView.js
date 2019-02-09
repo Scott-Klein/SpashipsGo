@@ -76,6 +76,31 @@ Vue.component('graphic-view', {
     }
 })
 
+
+Vue.component('hex-row', 
+{
+    props: {
+        rowData
+    },
+    template: 
+    `
+        <div>
+            <ul class="hexList">
+                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
+                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
+                <li class="hexItem" v-for="hexTile in rowData">
+                    <img :src=getHexDirectory(hextTile)/>
+                </li>
+            </ul>
+        </div>
+    `,
+    methods: {
+        getHexDirectory(hexTileName) {
+            return "vueComponents/map/" + hexTileName + ".png";
+        }
+    }
+})
+
 Vue.component('hex-map',
 {
     template: 
@@ -112,15 +137,3 @@ Vue.component('hex-map',
 }
 )
 
-Vue.component('hex-row', 
-{
-    template: 
-    `
-        <div>
-            <ul class="hexList">
-                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
-                <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
-            </ul>
-        </div>
-    `
-})

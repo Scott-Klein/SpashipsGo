@@ -77,6 +77,13 @@ Vue.component('building', {
         <div class="buildingName">
             <h4>{{name}}</h4>
         </div>
+        <div>
+            <p>Description:
+                500 Metal
+                200 Crystal
+                50 Uranium
+            </p>
+        </div>
         <div class="build-button" @click="beginBuild">
             <p>{{button}}</p>
         </div>
