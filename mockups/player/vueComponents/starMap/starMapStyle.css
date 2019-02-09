@@ -1,0 +1,11 @@
+.box {
+    background-color: lightblue;
+    width: 2.5fr ;
+    border: 2px;
+    padding: 20px;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
