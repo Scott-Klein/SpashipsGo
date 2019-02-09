@@ -1,9 +1,7 @@
 
 Vue.component('hex-row', 
 {
-    props: {
-        rowData
-    },
+    props: ['rowData'],
     template: 
     `
         <div>
@@ -11,7 +9,7 @@ Vue.component('hex-row',
                 <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
                 <li class="hexItem"><img src="vueComponents/map/oreHex.png"/></li>
                 <li class="hexItem" v-for="hexTile in this.rowData">
-                    <img :src=getHexDirectory(hextTile)/>
+                    <img :src="getHexDirectory(hexTile)" />
                 </li>
             </ul>
         </div>
