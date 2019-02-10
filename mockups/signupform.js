@@ -1,35 +1,16 @@
 Vue.component('sign-up', {
     template: 
     `
-    <div class="sign-up">
-    <p></p>
+    <div>
         <div>
             <!-- our signup form ===================== -->
-            <form id="signup-form" @submit.prevent="onSubmit">
-      
-                <!-- user name -->
-                    <div class="field">
-                        <label class="label">User name:</label>
-                        <input type="text" class="input" name="name">
-                    </div>
-
-                <!-- email -->
-                    <div class="field">
-                    <label class="label">Email:</label>
-                    <input type="email" class="input" name="email">
-                    </div>
-
-                <!-- password -->
-                    <div class="field">
-                        <label class="label">Password:</label>
-                        <input type="password" class="input" name="name">
-                    </div>
-
-                <!-- submit button -->
-                    <div class="field has-text-right">
-                        <button type="submit" class="button is-danger">Register</button>
-                    </div>
-                </form>
+            <form class="box" @submit.prevent="onSubmit" method="post">
+                <h1>Sign up</h1>
+                <input type="text" name="" placeholder="User name">
+                <input type="password" name="" placeholder="Password">
+                <input type="email" name="" placeholder="Email">
+                <input type="Submit" name="" value="Sign up">
+            </form>
         </div>
     </div>
     `,

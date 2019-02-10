@@ -36,7 +36,9 @@ Vue.component('planet', {
     },
     template: `
         <div>
-            <img :src=planetIcon>
+            <div>
+                <img :src=planetIcon>
+            </div>
         </div>
     `,
     computed: {

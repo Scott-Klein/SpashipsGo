@@ -1,10 +1,8 @@
 Vue.component('userforms', {
     template: 
     `
-    <div class="userforms">
+    <div>
         <button @click="logIn">Sign in</button>
-
-
         <button @click="SignUp">Sign Up</button>
 
         <sign-up v-show="SignUpClicked"></sign-up>
