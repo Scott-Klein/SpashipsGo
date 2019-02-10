@@ -6,10 +6,10 @@ Vue.component('login-form', {
             <!-- our sign in form -->
                 
             <form class="box" @submit.prevent="onSubmit" method="post">
-                <h1>Login</h1>
+                <h1>Sign in</h1>
                 <input type="text" name="" placeholder="User name">
                 <input type="password" name="" placeholder="Password">
-                <input type="submit" name="" value="Login">
+                <input type="submit" name="" value="Sign in">
             </form>
         </div>
     </div>
@@ -22,7 +22,6 @@ Vue.component('login-form', {
     methods: {
         logIn() {
             this.LogInClicked = true;
-
-        }
+        },
     }
 })

@@ -49,7 +49,7 @@ footer{
     padding: 25px;
 }
 
-#forms {
+.forms {
     padding: 25px;
 }
 
@@ -110,5 +110,10 @@ footer{
     border-radius: 10px 100px / 120px;
     width: 100px;
     text-align: center;
+    right: 100px;
 }
 
+.loginStyle.relative {
+    position: relative;
+    right: 100px;
+}

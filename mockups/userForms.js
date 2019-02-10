@@ -3,7 +3,7 @@ Vue.component('userforms', {
     `
     <div>
         <button @click="logIn" class="loginStyle">Sign in</button>
-        <button @click="SignUp" class="loginStyle">Sign Up</button>
+        <button @click="SignUp" class="loginStyle">Sign up</button>
 
         <sign-up v-show="SignUpClicked"></sign-up>
         <login-form v-show="LoginClicked"></login-form>
@@ -13,7 +13,7 @@ Vue.component('userforms', {
     data() {
         return {
             SignUpClicked: false,
-            LoginClicked : false,
+            LoginClicked : true,
         }
     },
     methods: {
