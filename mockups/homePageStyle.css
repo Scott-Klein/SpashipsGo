@@ -2,7 +2,7 @@ html {
     background-color: rgb(17, 35, 41);
 }
 
-h1 {
+.space {
     text-transform: uppercase;
     font-family: 'Press Start 2P', cursive;
     font-size: 45px;
@@ -54,7 +54,7 @@ footer{
 }
 
 .box{
-    width: 300px;
+    width: 400px;
     padding: 40px;
     position: absolute;
     text-align: center; 
@@ -65,9 +65,9 @@ footer{
     display: block;
     margin: 20px auto;
     text-align: center;
-    border: 2px solid #00FFFF;
+    border: 2px solid #2ecc71;
     padding: 14px 10px;
-    width: 200px;
+    width: 250px;
     outline: none;
     color: white;
     border-radius: 24px;
@@ -76,8 +76,8 @@ footer{
 }
 
 .box input[type="text"]:focus, .box input[type="password"]:focus, .box input[type="email"]:focus {
-    width: 280px;
-    border-color: #2ecc71;
+    width: 320px;
+    border-color: #00FFFF;
 }
 
 .box input[type="submit"] {
@@ -93,6 +93,7 @@ footer{
     border-radius: 24px;
     transition: 0.25s;
     cursor: pointer;
+    width: 150px;
 }
 
 .box input[type="submit"]:hover {
@@ -104,3 +105,10 @@ footer{
     text-transform: uppercase;
     font-weight: 500;
 }
+
+.loginStyle {
+    border-radius: 10px 100px / 120px;
+    width: 100px;
+    text-align: center;
+}
+
