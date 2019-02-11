@@ -5,19 +5,21 @@ Vue.component('building-star', {
             <div class="center">
                 <h1>Universe</h1>
             </div> 
-            <div class="box">
-                <div id="planetSystem">
-                    <ul>
-                        <li 
+            
+            <div id="planetSystem">
+                <div class="box">
+                    <template
                             is="building-planet"
                             v-for="system in systems"
                             v-bind:key="system.id"
-                            v-bind:number="system.number"
-                        ></li>
-                    </ul> 
-                    <li v-for="planet in planets">
-                        <planet :planetList="planets.number"></planet>
-                    </li>
+                    >
+                        <ul>
+                            <li v-for="planet in planets">
+                                <planet :planetList="planets.number"></planet>
+                            </li>
+                        </ul>
+                    </template>
+                </div>
             </div>
         </div>
               
@@ -31,7 +33,21 @@ Vue.component('building-star', {
                 { number: 4 },
                 { number: 5 },
                 { number: 6 },
-            ]
+            ],
+            systems: [
+                { id: 1 }
+            ],
+            nextSystemId: 1,
+        }
+    },
+    methods: {
+        add_new_system: function() {
+            if(planets.length > 6) {
+                this.systems.push({
+                    id = this.nextSystemId++
+                });
+                // planet.length = planet.length % 6;
+            }
         }
     }
 })
@@ -56,7 +72,7 @@ Vue.component('planet', {
 })
 
 
-Vue.component(building-planet, {
+/* Vue.component(building-planet, {
     template: `\
         <li>\ 
             {{ number }}\
@@ -87,7 +103,7 @@ new Vue ({
     }
 
 
-})
+}) */
 
 
 
