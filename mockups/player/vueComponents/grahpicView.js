@@ -24,7 +24,7 @@ Vue.component('graphic-view', {
 
             <div id="StarGrahpic" class="grahpicPanel" v-show="showStar">
             <p> 
-                <building-star></building-star>
+                <building-system></building-system>
             </p>
             </div>
         </div>
