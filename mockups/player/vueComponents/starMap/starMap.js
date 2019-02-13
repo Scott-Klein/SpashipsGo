@@ -7,7 +7,7 @@ Vue.component('building-star', {
             </div> 
             
            <div class="box">
-                <ul class="planetDisplay">
+                <ul class="planetDisplay" @addnewsystem="addNewSystem">
                     <li v-for="planet in planets">
                         <planet :planetList="planets.number"></planet>
                     </li>
@@ -72,7 +72,7 @@ Vue.component('building-system', {
         addNewSystem: function() {
             if(planets.length > 6) {
                 this.systems.push({
-                    id: nextSystemId++
+                    id: this.nextSystemId++
                 })
             }
         }
