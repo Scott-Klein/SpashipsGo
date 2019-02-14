@@ -68,6 +68,9 @@ Vue.component('building-system', {
             nextSystemId: 1
         }
     },
+    prop: {
+        system: Object;
+    },
     methods: {
         addNewSystem: function() {
             if(planets.length > 6) {
