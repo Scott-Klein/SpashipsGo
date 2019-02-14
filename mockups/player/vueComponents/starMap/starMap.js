@@ -7,7 +7,7 @@ Vue.component('building-star', {
             </div> 
             
            <div class="box">
-                <ul class="planetDisplay" @addnewsystem="addNewSystem">
+                <ul class="planetDisplay">
                     <li v-for="planet in planets">
                         <planet :planetList="planets.number"></planet>
                     </li>
@@ -55,7 +55,7 @@ Vue.component('building-star', {
 Vue.component('building-system', {
     template: `
         <div id="planetSystem">
-            <div id v-for="system in systems">
+            <div v-for="system in systems" @addnewsystem="addNewSystem">
                 <building-star></building-star>
             </div>
         </div>
