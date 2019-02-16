@@ -69,7 +69,7 @@ Vue.component('building-system', {
         }
     },
     prop: {
-        system: Object;
+        system: Object
     },
     methods: {
         addNewSystem: function() {
