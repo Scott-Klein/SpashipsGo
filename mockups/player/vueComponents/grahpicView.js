@@ -1,64 +1,60 @@
 
-Vue.component('hex-row', 
-{
-    props: ['rowData'],
-    template: 
-    `
-        <div>
-            <ul class="hexList">
-                <li class="hexItem" v-for="hexTile in this.rowData">
-                    <img :src="getHexDirectory(hexTile)" />
-                </li>
-            </ul>
-        </div>
+
+Vue.component('hex-row',
+    {
+        props: ['rowData'],
+        template:
+            `
+            <div>
+                <ul class="hexList">
+                    <li class="hexItem" v-for="hexTile in this.rowData">
+                        <img :src="getHexDirectory(hexTile)" />
+                    </li>
+                </ul>
+            </div>
+
     `,
-    methods: {
-        getHexDirectory(hexTileName) {
-            return "vueComponents/map/" + hexTileName + ".png";
+        methods: {
+            getHexDirectory(hexTileName) {
+                return "vueComponents/map/" + hexTileName + ".png";
+            }
         }
-    }
-})
+    })
 
 
 
 Vue.component('hex-map',
-{
-    template: 
-    `
+    {
+        methods: {
+            mapStyle(index) {
+                if (index % 2 != 0) {
+
+                }
+            }
+        },
+        template:
+            `
         <div class="hexMapRoot">
             <p>Hello Hex Map</p>
-            <ul>
-                <li v-for="(row, index) in map">
-                    <hex-row id={{"hexRow" + index}} :rowData="mapRow1" ></hex-row>
+            <ul class="hexList">
+                <li class="hexRow" v-for="(row, index) in this.map">
+                    <hex-row v-bind:id="['hexRow' + index]" :rowData=row ></hex-row>
                 </li>
             </ul>
-            
-            <hex-row id="hexTwoRow" :rowData="mapRow2" ></hex-row>
         </div>
     `,
-    data() {
-        return {
-            mapRow1: [
-                "oreHex",
-                "desertHex",
-                "clayHex",
-                "sheepHex",
-                "waterHex",
-                "wheatHex",
-                "woodHex"
-            ],
-            mapRow2: [
-                "oreHex",
-                "desertHex",
-                "clayHex",
-                "sheepHex",
-                "waterHex",
-                "wheatHex",
-                "woodHex" 
-            ]
+        data() {
+            return {
+                map: [
+                    ["oreHex", "desertHex", "waterHex", "waterHex", "waterHex", "waterHex", "woodHex"],
+                    ["oreHex", "desertHex", "clayHex", "sheepHex", "waterHex", "wheatHex", "woodHex"],
+                    ["oreHex", "desertHex", "waterHex", "waterHex", "waterHex", "waterHex", "woodHex"],
+                    ["oreHex", "desertHex", "clayHex", "sheepHex", "waterHex", "wheatHex", "woodHex"],
+                ]
+            }
         }
+
     }
-}
 )
 
 Vue.component('graphic-view', {

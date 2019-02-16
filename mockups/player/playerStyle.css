@@ -3,7 +3,7 @@ ul {
 }
 li {
     margin: 0px;
-
+    list-style: none;
 }
 p {
     margin: 0px;
@@ -25,8 +25,9 @@ h4 {
 }
 
 .hexItem {
-    float: left;
     max-width: 60px;
+    display: inline-block;
+    margin: 1px;
 }
 
 .grid-container-buttons {
@@ -44,6 +45,7 @@ h4 {
 
 .hexList {
     list-style: none;
+    white-space:nowrap;
 }
 
 .build-button {
@@ -111,12 +113,30 @@ h4 {
     height: 70vh;
     overflow: auto;
 }
+#graphicDash {
+    overflow: auto;
+}
+#hexMapList {
+    
+}
 
+#hexRow0 {
+    position: relative;
+}
 #hexRow1 {
     position: relative;
+    left: 31px;
+    bottom: 23px;
 }
 #hexRow2 {
     position: relative;
-    right: 390px;
-    bottom: -53px;
+    /*right: 86px;
+    bottom: 0px;*/
+}
+#hexRow3 {
+    position: relative;
+    /*
+    left: 31px;
+    bottom: 23px;
+    */
 }
