@@ -1,11 +1,9 @@
 Vue.component('userforms', {
     template: 
     `
-    <div class="userforms">
-        <button @click="logIn">Sign in</button>
-
-
-        <button @click="SignUp">Sign Up</button>
+    <div>
+        <button @click="logIn" class="loginStyle">Sign in</button>
+        <button @click="SignUp" class="loginStyle">Sign up</button>
 
         <sign-up v-show="SignUpClicked"></sign-up>
         <login-form v-show="LoginClicked"></login-form>
@@ -15,7 +13,7 @@ Vue.component('userforms', {
     data() {
         return {
             SignUpClicked: false,
-            LoginClicked : false,
+            LoginClicked : true,
         }
     },
     methods: {

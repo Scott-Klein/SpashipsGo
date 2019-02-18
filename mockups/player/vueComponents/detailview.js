@@ -23,7 +23,6 @@ Vue.component('detail-view', {
 
             <div id="buidlingDetail" class="detailPanel" v-show="showBuilding">
                 <h1>building</h1>
-                
                 <build-queue></build-queue>
                 <h2>Construct</h2>
                 <build-grid></build-grid>
@@ -33,8 +32,10 @@ Vue.component('detail-view', {
             </div>
 
             <div id="researchDetail" class="detailPanel" v-show="showResearch">
-                <h1>research</h1>
-                <p> a research tree should go here, to unlock new abilities and buildings.</p>
+                <div>
+                    <h1>research</h1>
+                    <researching></researching>
+                </div>
             </div>
 
             <div id="fleetDetail" class="detailPanel" v-show="showFleet">

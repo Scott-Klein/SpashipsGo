@@ -1,23 +1,15 @@
 Vue.component('login-form', {
     template: 
     `
-    <div class="login-form">
+    <div>
         <div>
             <!-- our sign in form -->
-            <form id="loginform">
                 
-                <!-- user name -->
-                    <div class="field">
-                        <label class="lable">User name:</label>
-                        <input type="text" class="input" name="name">
-                    </div>
-                
-                <!-- password -->
-                    <div class="field">
-                        <label class="lable">Password:</label>
-                        <input type="password" class="input" name="name">
-                    </div>
-                    <button type="submit" class="button is-danger">Login</button>
+            <form class="box" @submit.prevent="onSubmit" method="post">
+                <h1>Sign in</h1>
+                <input type="text" name="" placeholder="User name">
+                <input type="password" name="" placeholder="Password">
+                <input type="submit" name="" value="Sign in">
             </form>
         </div>
     </div>
@@ -30,7 +22,6 @@ Vue.component('login-form', {
     methods: {
         logIn() {
             this.LogInClicked = true;
-
-        }
+        },
     }
 })

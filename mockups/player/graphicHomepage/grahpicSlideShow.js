@@ -8,7 +8,6 @@ Vue.component('graphic-view', {
             <div>
                 <div v-for="number in [currentNumber]" :key='number'>
                 <img :src="currentImage" v-on:mouseover="stopRotation" v-on:mouseout="startRotation" width = "1200" height = "506" />   
-                </div>
                 <div id="overviewGraphic" v-show="showOverview">
                 </div>
                 <div id="buildingGraphic" v-show="showBuilding">
@@ -18,6 +17,7 @@ Vue.component('graphic-view', {
                 <div id="fleetGraphic" v-show="showFleet">
                 </div>
                 <div id="starGraphic" v-show="showStar">
+                </div>
                 </div>
             </div>
         `,
@@ -48,19 +48,62 @@ Vue.component('graphic-view', {
             this.timer = null;
         }, 
         next: function() {
-            this.currentNumber += 1
+            if(this.selectedGraphic == "overview") {
+                if(this.currentNumber == 0)
+                    {
+                        this.currentNumber = 1;
+                    }
+                else {
+                    this.currentNumber = 0;
+                }
+            }
+
+            else if(this.selectedGraphic == "building") {
+                if(this.currentNumber == 2)
+                    {
+                        this.currentNumber = 3;
+                    }
+                else {
+                    this.currentNumber = 2;
+                }
+            }
+
+            else if(this.selectedGraphic == "research") {
+                if(this.currentNumber == 4)
+                    {
+                        this.currentNumber = 5;
+                    }
+                else {
+                    this.currentNumber = 4;
+                }
+            }
+
+            else if(this.selectedGraphic == "fleet") {
+                if(this.currentNumber == 6)
+                    {
+                        this.currentNumber = 7;
+                    }
+                else {
+                    this.currentNumber = 6;
+                }
+            }
+
+            else if(this.selectedGraphic == "star") {
+                if(this.currentNumber == 8)
+                    {
+                        this.currentNumber = 9;
+                    }
+                else {
+                    this.currentNumber = 8;
+                }
+            };
         }
     },
 
     computed: {
         showOverview() {
             if(this.selectedGraphic == "overview"){
-                this.currentNumber = 0;
-                this.currentNumber < 2;
-                if(this.currentNumber >= 2) {
-                    this.currentNumber = 0
-                };
-                return this.currentNumber;
+                return true;
             }
             else {
                 return false;
@@ -69,12 +112,7 @@ Vue.component('graphic-view', {
 
         showBuilding() {
             if(this.selectedGraphic == "building") {
-                this.currentNumber = 2;
-                this.currentNumber < 4;
-                if(this.currentNumber >= 4) {
-                    this.currentNumber = 2
-                };
-                return this.currentNumber;
+                return true;
             }
             else {
                 return false;
@@ -83,12 +121,7 @@ Vue.component('graphic-view', {
 
         showResearch() {
             if(this.selectedGraphic == "research") {
-                this.currentNumber = 4;
-                this.currentNumber < 6;
-                if(this.currentNumber >= 6) {
-                    this.currentNumber = 4
-                };
-                return this.currentNumber;
+                return true;
             }
             else {
                 return false;
@@ -97,12 +130,7 @@ Vue.component('graphic-view', {
 
         showFleet() {
             if(this.selectedGraphic == "fleet") {
-                this.currentNumber = 6;
-                this.currentNumber < 8;
-                if(this.currentNumber >= 8) {
-                    this.currentNumber = 6
-                };
-                return this.currentNumber;
+                return true;
             }
             else {
                 return false;
@@ -111,12 +139,7 @@ Vue.component('graphic-view', {
 
         showStar() {
             if(this.selectedGraphic == "star") {
-                this.currentNumber = 8;
-                this.currentNumber < 10;
-                if(this.currentNumber >= 10) {
-                    this.currentNumber = 8
-                };
-                return this.currentNumber;
+                return true;
             }
             else {
                 return false;

@@ -1,0 +1,9 @@
+.research-box {
+    background-color: yellow;
+    border-color: blue;
+    color: black;
+    width: 325px;
+    height: 40px;
+    display: inline-block;
+    text-align: center;
+}

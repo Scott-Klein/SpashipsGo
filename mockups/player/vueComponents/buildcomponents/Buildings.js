@@ -1,6 +1,4 @@
-
-
-Vue.component('build-grid',{
+Vue.component('build-grid', {
     template: 
     `
         <div>
