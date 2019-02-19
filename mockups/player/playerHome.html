@@ -19,13 +19,14 @@
         </div>
         <h5>Player resources and other details at a glance.</h5>
         <div id="mainDash">
-
             <div id="sideDash" class="detailView">
                 <detail-view :selected-view="viewSelection"></detail-view>
             </div>
 
+            <div id="researchQuest">
             <div id="graphicDash" class="detailView">
                 <graphic-view :selected-view="viewSelection"></graphic-view>
+            </div>
             </div>
 
         </div>
@@ -36,7 +37,9 @@
     <script src="vueComponents/starMap/starMap.js"></script>
     <script src="vueComponents/grahpicView.js"></script>
     <script src="research/research.js"></script>
+    <script src="research/researchView.js"></script>
     <script src="vueComponents/main.js"></script>
+    <script src="vueComponents/mainQuest.js"></script>
 
 
 </body>

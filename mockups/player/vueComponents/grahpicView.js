@@ -5,7 +5,6 @@ Vue.component('graphic-view', {
     template:
         `
         <div>
-
             <div id="overviewGrahpic" class="grahpicPanel" v-show="showOverview">
                 <p> Overview grahpics here</p>
             </div>
@@ -15,7 +14,9 @@ Vue.component('graphic-view', {
             </div>
 
             <div id="researchGrahpic" class="grahpicPanel" v-show="showResearch">
-            <p> Research grahpics here</p>
+            <p> 
+                <research-system :selected-quest="viewQuest"></research-system>
+            </p>
             </div>
 
             <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">

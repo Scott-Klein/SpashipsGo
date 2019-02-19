@@ -7,7 +7,7 @@ Vue.component('research-box', {
         fieldId: {
             type: String,
             required: true
-        }
+        },
     },
     template: `
         <div>
@@ -20,12 +20,12 @@ Vue.component('research-box', {
 Vue.component('researching', {
     template: `
         <div>
-            <research-box @click.native="no1" research-name="Quest 1" field-id="quest no1" v-show="quest1"> </research-box>
-            <research-box @click.native="no2" research-name="Quest 2" field-id="quest no2" v-show="quest2"> </research-box>
-            <research-box @click.native="no3" research-name="Quest 3" field-id="quest no3" v-show="quest3"> </research-box>
-            <research-box @click.native="no4" research-name="Quest 4" field-id="quest no4" v-show="quest4"> </research-box>
-            <research-box @click.native="no5" research-name="Quest 5" field-id="quest no5" v-show="quest5"> </research-box>
-            <research-box @click.native="no6" research-name="Quest 6" field-id="quest no6" v-show="quest6"> </research-box>
+            <research-box @click.native="questNo1" research-name="Quest 1" field-id="quest no1" v-show="quest1"> </research-box>
+            <research-box @click.native="questNo2" research-name="Quest 2" field-id="quest no2" v-show="quest2"> </research-box>
+            <research-box @click.native="questNo3" research-name="Quest 3" field-id="quest no3" v-show="quest3"> </research-box>
+            <research-box @click.native="questNo4" research-name="Quest 4" field-id="quest no4" v-show="quest4"> </research-box>
+            <research-box @click.native="questNo5" research-name="Quest 5" field-id="quest no5" v-show="quest5"> </research-box>
+            <research-box @click.native="questNo6" research-name="Quest 6" field-id="quest no6" v-show="quest6"> </research-box>
         </div>
     `,
     data() {
@@ -39,22 +39,22 @@ Vue.component('researching', {
         }
     },
     methods: {
-        no1() {
+        questNo1() {
             this.quest2= true;
         },
-        no3() {
+        questNo3() {
             this.quest4= true;
         },
-        no5() {
+        questNo5() {
             this.quest6= true;
         },
-        no2() {
-
+        questNo2() {
+            this.viewQuest = "questNumber2"
         },
-        no4() {
-
+        questNo4() {
+            this.viewQuest = "questNumber4"
         },
-        no6() {
+        questNo6() {
 
         }
     }
