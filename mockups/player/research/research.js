@@ -8,6 +8,7 @@ Vue.component('research-box', {
             type: String,
             required: true
         },
+        viewQuest: String
     },
     template: `
         <div>
