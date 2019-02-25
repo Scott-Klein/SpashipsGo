@@ -34,7 +34,7 @@ Vue.component('detail-view', {
             <div id="researchDetail" class="detailPanel" v-show="showResearch">
                 <div>
                     <h1>research</h1>
-                    <researching></researching>
+                    <research-script></research-script>
                 </div>
             </div>
 

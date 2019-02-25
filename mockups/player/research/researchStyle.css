@@ -1,9 +1,31 @@
-.research-box {
-    background-color: yellow;
-    border-color: blue;
-    color: black;
-    width: 325px;
-    height: 40px;
-    display: inline-block;
-    text-align: center;
+.researchBox {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    border-bottom-width: 2px;
+    border-color: white;
+    background-color: #7ed6df;
+    border: 1px solid purple;
+    justify-content: space-between;
 }
+
+.researchBox::after, .researchBox::before {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 20.872rem;
+    padding: 0.75rem;
+    display: block;
+    border: 0.5px solid #a4b0be;
+    background-color: #e056fd;
+    text-align: center;   
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+
+
+
+

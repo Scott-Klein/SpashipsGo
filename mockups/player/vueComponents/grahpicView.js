@@ -14,9 +14,7 @@ Vue.component('graphic-view', {
             </div>
 
             <div id="researchQuest" class="grahpicPanel" v-show="showResearch">
-            <p> 
-                <research-system :selected-quest="viewQuest"></research-system>
-            </p>
+            <research-graphic :selected-quest="viewQuest"></research-graphic>
             </div>
 
             <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">
