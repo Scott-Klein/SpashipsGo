@@ -94,7 +94,7 @@ Vue.component('building', {
             return this.buildingType;
         },
         iconPath(){
-            return "vueComponents/buildcomponents/icons/"+ this.buildingType +".svg";
+            return "building/icons/"+ this.buildingType +".svg";
         }
     },
     methods:{

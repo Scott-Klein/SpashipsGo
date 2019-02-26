@@ -41,7 +41,7 @@ Vue.component('building-star', {
     `,
     computed: {
         planetIcon() {
-            return "vueComponents/starMap/planetImages/" + this.planetList + ".svg";
+            return "star/planetImages/" + this.planetList + ".svg";
         }
     }
 })
