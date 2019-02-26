@@ -13,7 +13,7 @@ Vue.component('graphic-view', {
                 <hex-map></hex-map>
             </div>
 
-            <div id="researchQuest" class="grahpicPanel" v-show="showResearch">
+            <div id="researchGraphic" class="grahpicPanel" v-show="showResearch">
             <research-graphic :selected-quest="viewQuest"></research-graphic>
             </div>
 
@@ -21,7 +21,7 @@ Vue.component('graphic-view', {
             <p> Fleet grahpics here</p>
             </div>
 
-            <div id="StarGrahpic" class="grahpicPanel" v-show="showStar">
+            <div id="starGrahpic" class="grahpicPanel" v-show="showStar">
             <p> 
                 <building-system></building-system>
             </p>

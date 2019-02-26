@@ -1,5 +1,5 @@
 var main = new Vue({
-    el: '#researchQuest',
+    el: '#main',
     data() {
         return {
             viewQuest: ""

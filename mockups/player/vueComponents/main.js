@@ -22,5 +22,4 @@ var app = new Vue({
             this.viewSelection = "star"
         }
     }
-    
 })
