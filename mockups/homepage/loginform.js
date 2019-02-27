@@ -9,7 +9,7 @@ Vue.component('login-form', {
                 <h1>Sign in</h1>
                 <input type="text" name="" placeholder="User name">
                 <input type="password" name="" placeholder="Password">
-                <input type="submit" name="" value="Sign in">
+                <btn-style title="Sign in"></btn-style>
             </form>
         </div>
     </div>

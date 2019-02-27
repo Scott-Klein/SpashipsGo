@@ -9,7 +9,7 @@ Vue.component('sign-up', {
                 <input type="text" name="" placeholder="User name">
                 <input type="email" name="" placeholder="Email">
                 <input type="password" name="" placeholder="Password">
-                <input type="Submit" name="" value="Sign up">
+                <btn-style title="Sign up"></btn-style>
             </form>
         </div>
     </div>
