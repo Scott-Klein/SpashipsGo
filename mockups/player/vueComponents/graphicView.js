@@ -26,26 +26,37 @@ Vue.component('hex-row',
 Vue.component('hex-map',
     {
         methods: {
-            mapStyle(index) {
-                if (index % 2 != 0) {
-
+            styles(index) {
+                console.log(index);
+                var result = "position: relative;"
+                if(index != 0)
+                {
+                    result += "bottom: " + (index *22) + "px; ";
+                    if(index % 2 == 1) // if row is odd
+                    {
+                        result += "left: 31px;";
+                    }
                 }
+                return result;
             }
         },
         template:
             `
         <div class="hexMapRoot">
-            <p>Hello Hex Map</p>
             <ul class="hexList">
                 <li class="hexRow" v-for="(row, index) in this.map">
-                    <hex-row v-bind:id="['hexRow' + index]" :rowData=row ></hex-row>
+                    <hex-row :id="['hexRow' + index]" :rowData=row :style="styles(index)" ></hex-row>
                 </li>
             </ul>
         </div>
     `,
         data() {
             return {
-                map: [
+                map: [ //dummy data to be provided by api later.
+                    ["oreHex", "desertHex", "waterHex", "waterHex", "waterHex", "waterHex", "woodHex"],
+                    ["oreHex", "desertHex", "clayHex", "sheepHex", "waterHex", "wheatHex", "woodHex"],
+                    ["oreHex", "desertHex", "waterHex", "waterHex", "waterHex", "waterHex", "woodHex"],
+                    ["oreHex", "desertHex", "clayHex", "sheepHex", "waterHex", "wheatHex", "woodHex"],
                     ["oreHex", "desertHex", "waterHex", "waterHex", "waterHex", "waterHex", "woodHex"],
                     ["oreHex", "desertHex", "clayHex", "sheepHex", "waterHex", "wheatHex", "woodHex"],
                     ["oreHex", "desertHex", "waterHex", "waterHex", "waterHex", "waterHex", "woodHex"],
@@ -53,7 +64,6 @@ Vue.component('hex-map',
                 ]
             }
         }
-
     }
 )
 

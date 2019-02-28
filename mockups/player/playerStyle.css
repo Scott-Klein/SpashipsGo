@@ -116,27 +116,27 @@ h4 {
 #graphicDash {
     overflow: auto;
 }
+/*
 #hexMapList {
     
 }
-
+*/
+/*
 #hexRow0 {
     position: relative;
 }
 #hexRow1 {
     position: relative;
     left: 31px;
-    bottom: 23px;
+    bottom: 22px;
 }
 #hexRow2 {
     position: relative;
-    /*right: 86px;
-    bottom: 0px;*/
+    right: 0px;
+    bottom: 44px;
 }
 #hexRow3 {
     position: relative;
-    /*
     left: 31px;
-    bottom: 23px;
-    */
-}
+    bottom: 66px;
+}*/
