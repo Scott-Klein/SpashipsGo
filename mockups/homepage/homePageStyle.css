@@ -135,7 +135,6 @@ a span:nth-child(1) {
     height: 2px;
     background: linear-gradient(to right, #0c002b, #1179ff);
     animation: animate1 1s linear infinite;
-    animation-delay: 0.5s;
 }
 
 @keyframes animate1 {
@@ -157,6 +156,7 @@ a span:nth-child(2) {
     height: 100%;
     background: linear-gradient(to bottom, #0c002b, #1179ff);
     animation: animate2 1s linear infinite;
+    animation-delay: 0.5s;
 }
 
 @keyframes animate2 {
@@ -178,7 +178,6 @@ a span:nth-child(3) {
     height: 2px;
     background: linear-gradient(to left, #0c002b, #1179ff);
     animation: animate3 1s linear infinite;
-    animation-delay: 0.5s;
 }
 
 @keyframes animate3 {
@@ -200,6 +199,7 @@ a span:nth-child(4) {
     height: 100%;
     background: linear-gradient(to top, #0c002b, #1179ff);
     animation: animate4 1s linear infinite;
+    animation-delay: 0.5s;
 }
 
 @keyframes animate4 {
