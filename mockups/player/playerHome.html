@@ -20,7 +20,11 @@
         <h5>Player resources and other details at a glance.</h5>
         <div id="mainDash">
             <div id="sideDash" class="detailView">
-                <detail-view :selected-view="viewSelection"></detail-view>
+                <detail-view :selected-view="viewSelection" @quest1_no1="view_quest1_no1" 
+                                                            @quest1_no2="view_quest1_no2"
+                                                            @quest2_no1="view_quest2_no1"
+                                                            @quest3_no1="view_quest3_no1">
+                </detail-view>
             </div>
 
             <div id="graphicDash" class="detailView">

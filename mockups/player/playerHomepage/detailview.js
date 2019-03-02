@@ -34,7 +34,11 @@ Vue.component('detail-view', {
             <div id="researchDetail" class="detailPanel" v-show="showResearch">
                 <div>
                     <h1>research</h1>
-                    <research-script></research-script>
+                    <research-script @viewQuest1No1="showQuest1No1" 
+                                     @viewQuest1No2="showQuest1No2" 
+                                     @viewQuest2No1="showQuest2No1"
+                                     @viewQuest3No1="showQuest3No1">
+                    </research-script>
                 </div>
             </div>
 
@@ -96,6 +100,20 @@ Vue.component('detail-view', {
             else {
                 return false;
             }
+        }
+    },
+    methods: {
+        showQuest1No1() {
+            this.$emit('quest1_no1')
+        },
+        showQuest1No2() {
+            this.$emit('quest1_no2')
+        },
+        showQuest2No1() {
+            this.$emit('quest2_no1')
+        },
+        showQuest3No1() {
+            this.$emit('quest3_no1')
         }
     }
 })

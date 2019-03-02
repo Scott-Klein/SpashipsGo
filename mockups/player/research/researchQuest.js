@@ -21,21 +21,21 @@ Vue.component('research-script', {
     `,
     data() {
         return {
-            viewQuest: "quest1_no1"
+            test: false
         }
     },
     methods: {
         quest1_no1() {
-            this.viewQuest = "quest1_no1"
+            this.$emit('viewQuest1No1')
         },
         quest1_no2() {
-            this.viewQuest = "quest1_no2"
+            this.$emit('viewQuest1No2')
         },
         quest2_no1() {
-            this.viewQuest = "quest2_no1"
+            this.$emit('viewQuest2No1')
         },
         quest3_no1() {
-            this.viewQuest = "quest3_no1"
+            this.$emit('viewQuest3No1')
         }
     }
 })

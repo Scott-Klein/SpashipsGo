@@ -1,6 +1,7 @@
 Vue.component('graphic-view', {
     props: {
-        selectedView: String
+        selectedView: String,
+        viewQuest: String,
     },
     template:
         `
