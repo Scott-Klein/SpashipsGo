@@ -4,7 +4,7 @@ Vue.component('research-script', {
         <research-box title="Quest 1">
             <input type="button" value="Finding fuel" class="container" @click="quest1_no1()">     
             </input>
-            <input type="button" value="Finding fire" class="container" @click="quest1_no2()" >     
+            <input type="button" value="Finding fire" class="container" @click="quest1_no2()">     
             </input>
         </research-box>
 
@@ -24,6 +24,7 @@ Vue.component('research-script', {
             test: false
         }
     },
+    //pass data to detail vue
     methods: {
         quest1_no1() {
             this.$emit('viewQuest1No1')

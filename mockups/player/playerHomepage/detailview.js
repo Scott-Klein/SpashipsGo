@@ -102,6 +102,7 @@ Vue.component('detail-view', {
             }
         }
     },
+    //pass data to root element
     methods: {
         showQuest1No1() {
             this.$emit('quest1_no1')
