@@ -15,7 +15,7 @@ Vue.component('graphic-view', {
             </div>
 
             <div id="researchGraphic" class="grahpicPanel" v-show="showResearch">
-                <research-graphic :selected-quest="viewQuest"></research-graphic>
+                <research-graphic :selected-quest="this.$root.viewQuest"></research-graphic>
             </div>
 
             <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">
@@ -74,20 +74,6 @@ Vue.component('graphic-view', {
             else {
                 return false;
             }
-        },
-        quest1_no1() {
-            if (this.selectedQuest == "quest1_no1")
-                {
-                    return true;
-                }
-            else return false;
-        },
-        quest1_no2() {
-            if (this.selectedQuest == "quest1_no2")
-                {
-                    return true;
-                }
-            else return false;
         }
     }
 })

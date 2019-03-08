@@ -8,7 +8,7 @@ Vue.component('research-box', {
         }
     },
     template: `
-        <div class="">
+        <div class="research_bar">
             <div class="tab__header">
                 <a href="#" class="researchBox" @click.prevent="active = !active">
                     <strong>{{title}}</strong>

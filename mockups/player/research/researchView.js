@@ -4,7 +4,7 @@ Vue.component('research-graphic', {
     },
     template: `
         <div>
-            <div id="wk1" class="" v-show="show_quest1_no1">
+            <div id="showing_quest1_no1" class="" v-show="show_quest1_no1">
                 Script quest 1 no1
             </div>
             <div id="showing_quest1_no2" class="" v-show="show_quest1_no2">
@@ -25,25 +25,25 @@ Vue.component('research-graphic', {
     },
     computed: {
         show_quest1_no1() {
-            if(this.$parent.viewQuest == "quest1_no1") {
+            if(this.selectedQuest == "quest1_no1") {
                 return true
             }
             else return false
         },
         show_quest1_no2() {
-            if(this.$parent.viewQuest == "quest1_no2") {
+            if(this.selectedQuest == "quest1_no2") {
                 return true
             }
             else return false
         },
         show_quest2_no1() {
-            if(this.$parent.viewQuest == "quest2_no1") {
+            if(this.selectedQuest == "quest2_no1") {
                 return true
             }
             else return false
         },
         show_quest3_no1() {
-            if(this.$parent.viewQuest == "quest3_no1") {
+            if(this.selectedQuest == "quest3_no1") {
                 return true
             }
             else return false
