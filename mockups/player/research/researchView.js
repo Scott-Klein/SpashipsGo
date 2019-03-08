@@ -5,7 +5,7 @@ Vue.component('research-graphic', {
     template: `
         <div>
             <div id="showing_quest1_no1" class="" v-show="show_quest1_no1">
-                Script quest 1 no1
+                Script quest1 no1
             </div>
             <div id="showing_quest1_no2" class="" v-show="show_quest1_no2">
                 Script quest1 no2
