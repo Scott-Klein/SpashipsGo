@@ -19,7 +19,7 @@ Vue.component('graphic-view', {
             </div>
 
             <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">
-                <p> Fleet grahpics here</p>
+                <fleet-graphic></fleet-graphic>
             </div>
 
             <div id="starGrahpic" class="grahpicPanel" v-show="showStar">
