@@ -2,7 +2,7 @@ var app = new Vue({
     el: '#playerHomepage',
     data() {
         return {
-            viewSelection: "research",
+            viewSelection: "fleet",
             viewQuest: "",
         }
     },
