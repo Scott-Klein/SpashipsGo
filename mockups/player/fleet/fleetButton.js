@@ -1,8 +1,8 @@
 Vue.component('fleet-btn-toggle', {
     template: `
-        <div id="btn-toggle">
-            <input type="button" class="btn-fleet1" name="" @onClick="showRegularFleet()">
-            <input type="button" class="btn-fleet2" name="" @onClick="showColonisedFleet()">
+        <div class="navigate-btn">
+            <input type="button" class="btn-fleet1" name="" v-on:click="showRegularFleet()">
+            <input type="button" class="btn-fleet2" name="" v-on:click="showColonisedFleet()">
         </div>
     `,
     methods: {

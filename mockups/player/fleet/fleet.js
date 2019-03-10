@@ -1,50 +1,38 @@
 Vue.component('fleet-graphic', {
-    props: {
-        selectedFleet: String,
-
-    },
     template: `
         <div id="fleet">
-            <div>
+            <div id="btn-toggle">
                 <fleet-btn-toggle @show_regular_fleet="displayFleet"
                                   @show_colonised_fleet="colonisedFleet">
                 </fleet-btn-toggle>
             </div>
+            
+            <div>
+                <div class="fleetDisplay" v-show="display">
+                    <p> Bla bla bla </p>
+                </div>
 
-            <div class="fleetDisplay" v-show="showRFleet">
-                <p> Bla bla bla </p>
-            </div>
-
-            <div class="fleetColonised" v-show="showCFleet">
-                <p> Ble ble ble </p>
+                <div class="fleetColonised" v-show="colonised">
+                    <p> Ble ble ble </p>
+                </div>
             </div>
         </div>
     `,
     data() {
         return {
-            test: false
+            display: true,
+            colonised: false,
         }
     },
+    // methods to navigate between 2 buttons (display normal fleet or colonised fleet)
     methods: {
         displayFleet() {
-            this.selectedFleet = "regularFleet"
+            this.display = true;
+            this.colonised = false;
         },
         colonisedFleet() {
-            this.selectedFleet = "colonisedFleet"
+            this.display = false;
+            this.colonised = true;
         }
     },
-    computed: {
-        showRFleet() {
-            if(this.selectedFleet == "regularFleet") {
-                return true
-            }
-            else return false
-        },
-        showCFleet() {
-            if(this.selectedFleet == "colonisedFleet") {
-                return true
-            }
-            else return false
-        }
-    }
 })
