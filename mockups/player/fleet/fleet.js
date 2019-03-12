@@ -2,9 +2,9 @@ Vue.component('fleet-graphic', {
     template: `
         <div id="fleet">
             <div id="btn-toggle">
-                <fleet-btn-toggle @show_regular_fleet="displayFleet"
-                                  @show_colonised_fleet="colonisedFleet">
-                </fleet-btn-toggle>
+                <toggle-view @show_regular_fleet="displayFleet"
+                             @show_colonised_fleet="colonisedFleet">
+                </toggle-view>
             </div>
             
             <div>
