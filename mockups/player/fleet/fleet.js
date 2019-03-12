@@ -9,11 +9,11 @@ Vue.component('fleet-graphic', {
             
             <div>
                 <div class="fleetDisplay" v-show="display">
-                    <p> Bla bla bla </p>
+                    <p> Displat fleet here </p>
                 </div>
 
                 <div class="fleetColonised" v-show="colonised">
-                    <p> Ble ble ble </p>
+                    <p> Show colonised fleet here </p>
                 </div>
             </div>
         </div>

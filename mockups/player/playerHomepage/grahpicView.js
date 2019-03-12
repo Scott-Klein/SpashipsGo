@@ -2,31 +2,30 @@ Vue.component('graphic-view', {
     props: {
         selectedView: String,
     },
-    template:
-        `
-        <div>
-            <div id="overviewGrahpic" class="grahpicPanel" v-show="showOverview">
-                <p> Overview grahpics here</p>
-            </div>
+    template: `
+            <div>
+                <div id="overviewGrahpic" class="grahpicPanel" v-show="showOverview">
+                    <p> Overview grahpics here</p>
+                </div>
 
-            <div id="buidlingGrahpic" class="grahpicPanel" v-show="showBuilding">
-                <hex-map></hex-map>
-            </div>
+                <div id="buidlingGrahpic" class="grahpicPanel" v-show="showBuilding">
+                    <hex-map></hex-map>
+                </div>
 
-            <div id="researchGraphic" class="grahpicPanel" v-show="showResearch">
-                <research-graphic :selected-quest="this.$root.viewQuest"></research-graphic>
-            </div>
+                <div id="researchGraphic" class="grahpicPanel" v-show="showResearch">
+                    <research-graphic :selected-quest="this.$root.viewQuest"></research-graphic>
+                </div>
 
-            <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">
-                <fleet-graphic></fleet-graphic>
-            </div>
+                <div id="fleetGrahpic" class="grahpicPanel" v-show="showFleet">
+                    <fleet-graphic></fleet-graphic>
+                </div>
 
-            <div id="starGrahpic" class="grahpicPanel" v-show="showStar">
-            <p> 
-                <building-system></building-system>
-            </p>
+                <div id="starGrahpic" class="grahpicPanel" v-show="showStar">
+                <p> 
+                    <building-system></building-system>
+                </p>
+                </div>
             </div>
-        </div>
         `,
     data() {
         return {
