@@ -1,11 +1,13 @@
 Vue.component('fleet-graphic', {
     template: `
-        <div id="fleet">
-            <div id="btn-toggle">
+        <div id="btn-fleet">
+            <div id="btn-toggle" class="display-btn">
                 <toggle-view @show_regular_fleet="displayFleet"
                              @show_colonised_fleet="colonisedFleet">
                 </toggle-view>
             </div>
+
+            <hr>
             
             <div>
                 <div class="fleetDisplay" v-show="display">

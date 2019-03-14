@@ -1,9 +1,7 @@
 .btn-container {
     position: absolute;
-    top: 24.5%;
+    margin-top: 7px;
     right: 1.5%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
     text-align: center;
     line-height: 20px;
 }
@@ -153,3 +151,38 @@
     cursor: pointer;
     transform: skew(-21deg);
 }   
+
+
+.display-btn {
+    height: 4vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
